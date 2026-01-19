@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TrebTube Ultimate</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23FF0000'/><text x='50' y='65' font-size='55' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>TT</text></svg>">
+</head>
+<body>
+
+<!-- Tutorial -->
+<div id="tutorial" class="tutorial hidden">
+  <div class="tutorial-box">
+    <h2>👋 Welcome to TrebTube Ultimate!</h2>
+    <p>How to use:</p>
+    <ul>
+      <li>🔍 Search videos</li>
+      <li>📎 Paste a YouTube link or LIVE link</li>
+      <li>🎬 Browse Shorts</li>
+      <li>⭐ Add to Favorites</li>
+      <li>🌙 Toggle Dark / Light mode</li>
+      <li>💻 Try the Editor sandbox</li>
+    </ul>
+    <button id="tutorialBtn">Got it!</button>
+  </div>
+</div>
+
+<header>
+  <div class="logo">
+    <svg width="32" height="32" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="48" fill="#FF0000" />
+      <text x="50%" y="55%" font-size="50" text-anchor="middle" fill="white" font-family="Arial" font-weight="bold">TT</text>
+    </svg>
+    TrebTube
+  </div>
+  <input id="search" placeholder="Search videos">
+  <button onclick="toggleTheme()">🌓</button>
+  <button onclick="showEditor()">💻 Editor</button>
+</header>
+
+<section class="paste">
+  <input id="pasteUrl" placeholder="Paste YouTube video or LIVE link">
+  <button onclick="openFromLink()">Watch</button>
+</section>
+
+<!-- Favorites Section -->
+<section id="favoritesSection">
+  <h2>⭐ Favorites</h2>
+  <div class="grid" id="favoritesGrid"></div>
+</section>
+
+<section class="shorts" id="shortsGrid"></section>
+
+<main class="grid" id="videoGrid"></main>
+
+<!-- Mini Player -->
+<div id="miniPlayer" class="mini-player hidden">
+  <iframe id="miniFrame" allowfullscreen></iframe>
+  <button onclick="closeMini()">✖</button>
+</div>
+
+<!-- Editor Sandbox -->
+<div id="editorBox" class="editor hidden">
+  <textarea id="htmlCode" placeholder="HTML here"></textarea>
+  <textarea id="cssCode" placeholder="CSS here"></textarea>
+  <textarea id="jsCode" placeholder="JS here"></textarea>
+  <button id="runBtn">Run</button>
+  <iframe id="editorPreview"></iframe>
+  <button onclick="closeEditor()">Close Editor</button>
+</div>
+
+<!-- Footer badge -->
+<footer class="badge">
+  Made with ❤️ by ChatGPT-5 mini
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

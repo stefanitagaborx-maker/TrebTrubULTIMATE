@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Watch</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23FF0000'/><text x='50' y='65' font-size='55' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>TT</text></svg>">
+</head>
+<body>
+
+<a class="back" href="./index.html">⬅ Back</a>
+
+<div class="player-container">
+  <iframe id="player" allowfullscreen></iframe>
+</div>
+
+<!-- Footer badge -->
+<footer class="badge">
+  Made with ❤️ by ChatGPT-5 mini
+</footer>
+
+<script>
+  const id = new URLSearchParams(window.location.search).get("v");
+  if (id) {
+    document.getElementById("player").src =
+      `https://www.youtube.com/embed/${id}?autoplay=1&modestbranding=1&rel=0&showinfo=0`;
+  }
+</script>
+
+</body>
+</html>
